@@ -26,3 +26,24 @@
 .sub-heading {
   font-size: xx-large;
 }
+
+.getStarted{
+  margin-left: 250;
+}
+
+.box {
+  width: 25%;
+  margin-top: 30px;
+  margin-left: 40%;
+  text-align: center;
+  border: 1px solid #D32F2F;
+  background-color: #D32F2F;
+  color: #fff;
+  padding: 11px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 300;
+}

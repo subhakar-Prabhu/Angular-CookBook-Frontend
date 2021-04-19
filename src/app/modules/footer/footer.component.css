@@ -1,0 +1,26 @@
+.footer .copyright {
+  margin: 24px 0px 10px 565px;
+  font-size: 16px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #053e66;
+  color: white;
+  display: flex;
+  max-height: 70px;
+  margin-top: 455px;
+}
+
+.socialMediaAvatar {
+  margin: 7px;
+  width: 30px;
+  height: 30px;
+}
+
+.socialMedia {
+  margin-top: 8px;
+  padding-left: 400px;
+}
