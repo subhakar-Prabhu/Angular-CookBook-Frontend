@@ -8,4 +8,13 @@
   height: 55px;
   margin-top: 473px;
   margin:auto;
+  font-size: 23px;
+}
+
+.leadHeading {
+  margin: 0 0 10px 544px;
+  font-size: 20px;
+  font-family: system-ui;
+  margin-left: 38%;
+  margin-top: 14px;
 }
