@@ -23,6 +23,10 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDateSelectEvent(evt: any) {
+    console.log('Selected Date Value:', evt);
+  }
+
   onDataSelectEvent(evt: any) {
     console.log('Selected Dropdown Value:', evt);
   }

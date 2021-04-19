@@ -6,6 +6,8 @@
 <app-input placeholder="Phone Number" ></app-input> &nbsp;
 <app-input placeholder="SSN Number" ></app-input> <br/> <br/>
 
+<app-datepicker (selectedDate)="onDateSelectEvent($event)"></app-datepicker>
+
 <app-dropdown [dropdownOptions]="dropdownOptions" [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
 
 <app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
