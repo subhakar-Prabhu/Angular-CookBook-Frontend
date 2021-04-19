@@ -1,0 +1,15 @@
+<h2>Sign Up</h2> <br/>
+
+<app-input placeholder="First Name" ></app-input> &nbsp;
+<app-input placeholder="Middle Name" ></app-input> &nbsp;
+<app-input placeholder="Last Name" ></app-input> <br/> <br/>
+<app-input placeholder="Phone Number" ></app-input> &nbsp;
+<app-input placeholder="SSN Number" ></app-input> <br/> <br/>
+
+<app-dropdown [dropdownOptions]="dropdownOptions" [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
+
+<app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
+    controlName="comment"></app-textarea> <br/> <br/>
+
+<app-button [text]="'Submit'"> </app-button> &nbsp;
+<app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
