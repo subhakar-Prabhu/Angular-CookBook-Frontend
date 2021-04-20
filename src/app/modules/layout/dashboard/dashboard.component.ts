@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngRxBtn() {
-    alert('ngRxBtn');
+    this.router.navigate(['/ngRx']);
   }
 
   apiBtn() {
