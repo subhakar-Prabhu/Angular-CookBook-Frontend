@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
+  styleUrls: ['./forms.component.css']
 })
-export class SignupComponent implements OnInit {
+export class FormsComponent implements OnInit {
 
   dropdownOptions = [
     { id: 1, name: 'Honda' },

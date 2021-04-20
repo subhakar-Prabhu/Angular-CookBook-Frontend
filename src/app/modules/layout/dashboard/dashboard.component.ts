@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   }
 
   formsBtn() {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/forms']);
   }
 
   ngRxBtn() {

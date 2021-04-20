@@ -2,22 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './modules/signup/signup.component';
-import { IntroductionComponent } from './modules/introduction/introduction.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { FormsComponent } from './modules/component/forms/forms.component';
+import { IntroductionComponent } from './modules/layout/introduction/introduction.component';
+import { DashboardComponent } from './modules/layout/dashboard/dashboard.component';
 import { CardModule } from 'primeng/card';
 import { AngularCommonLibModule } from '@psubakar/angular-common-lib';
-import { HeaderComponent } from './modules/header/header.component';
-import { FooterComponent } from './modules/footer/footer.component';
+import { HeaderComponent } from './modules/layout/header/header.component';
+import { FooterComponent } from './modules/layout/footer/footer.component';
+import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
+    FormsComponent,
     IntroductionComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NgRxComponent
   ],
   imports: [
     CardModule,
