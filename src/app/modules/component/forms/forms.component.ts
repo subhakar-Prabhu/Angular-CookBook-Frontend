@@ -10,10 +10,10 @@ export class FormsComponent implements OnInit {
 
   public form: FormGroup;
   objectArray = [
-    {value: 'Accounting', key: 'A'},
-    {value: 'Marketing', key: 'M'},
-    {value: 'Production', key: 'P'},
-    {value: 'Research', key: 'R'}
+    {value: 'Tyre Replacement', key: 'A'},
+    {value: 'General Service', key: 'M'},
+    {value: 'Battery Service', key: 'P'},
+    {value: 'A/C Service', key: 'R'}
   ];
 
   dropdownOptions = [

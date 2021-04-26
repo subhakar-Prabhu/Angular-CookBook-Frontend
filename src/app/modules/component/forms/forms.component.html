@@ -6,10 +6,10 @@
 <app-input placeholder="Last Name" formControlName="lastName" ngDefaultControl></app-input> &nbsp;
 <app-input placeholder="Phone Number" formControlName="phoneNumber" ngDefaultControl></app-input> &nbsp;
 <app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/>
-
-<app-radio [itemsarray]="objectArray" [typeofitem]="'keyvalue'" formControlName="radioChoice" ngDefaultControl></app-radio> 
-
 <app-dropdown [dropdownOptions]="dropdownOptions" formControlName="vehicleDropdown" ngDefaultControl [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
+
+<h3> Please Choose the Service Type: </h3>
+<app-radio [itemsarray]="objectArray" [typeofitem]="'keyvalue'" formControlName="radioChoice" ngDefaultControl></app-radio> 
 
 <app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
     controlName="comment" formControlName="comment" ngDefaultControl></app-textarea> <br/> <br/>
@@ -17,6 +17,10 @@
 <app-button [text]="'Submit'"> </app-button> &nbsp;
 <app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
 </form>
+
+<br/>
+<h2> Output: </h2>
+
 {{form.value | json}}
 
 <app-footer></app-footer>
