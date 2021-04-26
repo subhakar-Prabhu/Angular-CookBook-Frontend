@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
+
+  public form: FormGroup;
 
   dropdownOptions = [
     { id: 1, name: 'Honda' },
@@ -18,7 +21,12 @@ export class FormsComponent implements OnInit {
     { id: 4, name: 'Volkswagen ' }
   ];
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      firstName: [null, Validators.required],
+      middleName: [null, Validators.required]
+    });
+  }
 
   ngOnInit(): void {
   }
