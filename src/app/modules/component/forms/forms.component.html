@@ -5,7 +5,9 @@
 <app-input placeholder="Middle Name" formControlName="middleName" ngDefaultControl></app-input> &nbsp;
 <app-input placeholder="Last Name" formControlName="lastName" ngDefaultControl></app-input> &nbsp;
 <app-input placeholder="Phone Number" formControlName="phoneNumber" ngDefaultControl></app-input> &nbsp;
-<app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/> <br/>
+<app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/>
+
+<app-radio [itemsarray]="objectArray" [typeofitem]="'keyvalue'" formControlName="radioChoice" ngDefaultControl></app-radio> 
 
 <app-dropdown [dropdownOptions]="dropdownOptions" formControlName="vehicleDropdown" ngDefaultControl [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
 

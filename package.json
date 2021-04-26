@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
     "@ng-select/ng-select": "^6.1.0",
-    "@psubakar/angular-common-lib": "^0.21.0",
+    "@psubakar/angular-common-lib": "^0.22.0",
     "ag-grid-angular": "^25.1.0",
     "ag-grid-community": "^25.1.0",
     "ngx-spinner": "^11.0.1",

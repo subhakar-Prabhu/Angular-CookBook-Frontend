@@ -9,6 +9,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class FormsComponent implements OnInit {
 
   public form: FormGroup;
+  objectArray = [
+    {value: 'Accounting', key: 'A'},
+    {value: 'Marketing', key: 'M'},
+    {value: 'Production', key: 'P'},
+    {value: 'Research', key: 'R'}
+  ];
 
   dropdownOptions = [
     { id: 1, name: 'Honda' },
@@ -29,7 +35,8 @@ export class FormsComponent implements OnInit {
       phoneNumber: [null, Validators.required],
       ssnNumber: [null, Validators.required],
       comment: [null, Validators.required],
-      vehicleDropdown: [null, Validators.required]
+      vehicleDropdown: [null, Validators.required],
+      radioChoice: [null, Validators.required]
     });
   }
 
