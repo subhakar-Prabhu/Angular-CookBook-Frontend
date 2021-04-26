@@ -10,6 +10,7 @@ import { AngularCommonLibModule } from '@psubakar/angular-common-lib';
 import { HeaderComponent } from './modules/layout/header/header.component';
 import { FooterComponent } from './modules/layout/footer/footer.component';
 import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,10 @@ import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
   ],
   imports: [
     CardModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     AngularCommonLibModule
   ],
   providers: [],

@@ -24,11 +24,15 @@ export class FormsComponent implements OnInit {
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       firstName: [null, Validators.required],
-      middleName: [null, Validators.required]
+      middleName: [null, Validators.required],
+      lastName: [null, Validators.required],
+      phoneNumber: [null, Validators.required],
+      ssnNumber: [null, Validators.required]
     });
   }
 
   ngOnInit(): void {
+
   }
 
   onDataSelectEvent(evt: any) {

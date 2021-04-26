@@ -1,10 +1,11 @@
 <app-header></app-header>
 <h2> Form Example </h2>
-<app-input placeholder="First Name" ></app-input> &nbsp;
-<app-input placeholder="Middle Name" ></app-input> &nbsp;
-<app-input placeholder="Last Name" ></app-input> <br/> <br/>
-<app-input placeholder="Phone Number" ></app-input> &nbsp;
-<app-input placeholder="SSN Number" ></app-input> <br/> <br/>
+<form [formGroup]="form">
+<app-input placeholder="First Name" formControlName="firstName" ngDefaultControl></app-input> &nbsp;
+<app-input placeholder="Middle Name" formControlName="middleName" ngDefaultControl></app-input> &nbsp;
+<app-input placeholder="Last Name" formControlName="lastName" ngDefaultControl></app-input> &nbsp;
+<app-input placeholder="Phone Number" formControlName="phoneNumber" ngDefaultControl></app-input> &nbsp;
+<app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/> <br/>
 
 <app-dropdown [dropdownOptions]="dropdownOptions" [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
 
@@ -13,4 +14,7 @@
 
 <app-button [text]="'Submit'"> </app-button> &nbsp;
 <app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
+</form>
+{{form.value | json}}
+
 <app-footer></app-footer>
