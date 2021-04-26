@@ -27,7 +27,9 @@ export class FormsComponent implements OnInit {
       middleName: [null, Validators.required],
       lastName: [null, Validators.required],
       phoneNumber: [null, Validators.required],
-      ssnNumber: [null, Validators.required]
+      ssnNumber: [null, Validators.required],
+      comment: [null, Validators.required],
+      vehicleDropdown: [null, Validators.required]
     });
   }
 

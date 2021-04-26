@@ -7,10 +7,10 @@
 <app-input placeholder="Phone Number" formControlName="phoneNumber" ngDefaultControl></app-input> &nbsp;
 <app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/> <br/>
 
-<app-dropdown [dropdownOptions]="dropdownOptions" [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
+<app-dropdown [dropdownOptions]="dropdownOptions" formControlName="vehicleDropdown" ngDefaultControl [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
 
 <app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
-    controlName="comment"></app-textarea> <br/> <br/>
+    controlName="comment" formControlName="comment" ngDefaultControl></app-textarea> <br/> <br/>
 
 <app-button [text]="'Submit'"> </app-button> &nbsp;
 <app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
