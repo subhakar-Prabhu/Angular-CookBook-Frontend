@@ -36,7 +36,8 @@ export class FormsComponent implements OnInit {
       ssnNumber: [null, Validators.required],
       comment: [null, Validators.required],
       vehicleDropdown: [null, Validators.required],
-      radioChoice: [null, Validators.required]
+      radioChoice: [null, Validators.required],
+      dateChoice: [null, Validators.required]
     });
   }
 
@@ -46,5 +47,9 @@ export class FormsComponent implements OnInit {
 
   onDataSelectEvent(evt: any) {
     console.log('Selected Dropdown Value:', evt);
+  }
+
+  onDateSelectEvent(evt: any) {
+    console.log('Selected Date Value:', evt);
   }
 }

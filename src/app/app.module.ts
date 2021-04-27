@@ -11,6 +11,7 @@ import { HeaderComponent } from './modules/layout/header/header.component';
 import { FooterComponent } from './modules/layout/footer/footer.component';
 import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularCommonLibModule
+    AngularCommonLibModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
