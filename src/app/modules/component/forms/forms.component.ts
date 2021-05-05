@@ -48,12 +48,14 @@ isFormValid = () => this.isFormSubmitted || !this.form.dirty;
   }
 
   onDataSelectEvent(evt: any) {
-    this.form.patchValue({vehicleDropdown: evt.name})
+    this.form.patchValue({vehicleDropdown: evt.name});
+    this.form.markAsDirty();
     console.log('Selected Dropdown Value:', evt);
   }
 
   onDateSelectEvent(evt: any) {
     this.form.patchValue({ dateChoice: evt });
+    this.form.markAsDirty();
     console.log('Selected Date Value:', evt);
   }
   onSubmit() {
