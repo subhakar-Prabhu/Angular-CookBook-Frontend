@@ -1,29 +1,96 @@
 <app-header></app-header>
-<h2> Form Example </h2>
+<p-toast></p-toast>
+<h2>Form Example</h2>
 <form [formGroup]="form">
-<app-input placeholder="First Name" formControlName="firstName" ngDefaultControl></app-input> &nbsp;
-<app-input placeholder="Middle Name" formControlName="middleName" ngDefaultControl></app-input> &nbsp;
-<app-input placeholder="Last Name" formControlName="lastName" ngDefaultControl></app-input> &nbsp;
-<app-input placeholder="Phone Number" formControlName="phoneNumber" ngDefaultControl></app-input> &nbsp;
-<app-input placeholder="SSN Number" formControlName="ssnNumber" ngDefaultControl></app-input> <br/>
-<app-datepicker (selectedDate)="onDateSelectEvent($event)" formControlName="dateChoice" ngDefaultControl></app-datepicker>
+  <app-input
+    placeholder="First Name"
+    formControlName="firstName"
+    ngDefaultControl
+  ></app-input>
+  &nbsp;
+  <app-input
+    placeholder="Middle Name"
+    formControlName="middleName"
+    ngDefaultControl
+  ></app-input>
+  &nbsp;
+  <app-input
+    placeholder="Last Name"
+    formControlName="lastName"
+    ngDefaultControl
+  ></app-input>
+  &nbsp;
+  <app-input
+    placeholder="Phone Number"
+    formControlName="phoneNumber"
+    ngDefaultControl
+  ></app-input>
+  &nbsp;
+  <app-input
+    placeholder="SSN Number"
+    formControlName="ssnNumber"
+    ngDefaultControl
+  ></app-input>
+  <br />
+  <app-datepicker
+    (selectedDate)="onDateSelectEvent($event)"
+    formControlName="dateChoice"
+    ngDefaultControl
+  ></app-datepicker>
 
-<app-dropdown [dropdownOptions]="dropdownOptions" formControlName="vehicleDropdown" ngDefaultControl [searchable]="false" placeholder="Please Choose Value" (selectedEvent)="onDataSelectEvent($event)"> </app-dropdown>
+  <app-dropdown
+    [dropdownOptions]="dropdownOptions"
+    formControlName="vehicleDropdown"
+    ngDefaultControl
+    [searchable]="false"
+    placeholder="Please Choose Value"
+    (selectedEvent)="onDataSelectEvent($event)"
+  >
+  </app-dropdown>
 
-<h3> Please Choose the Service Type: </h3>
-<app-radio [itemsarray]="objectArray" [typeofitem]="'keyvalue'" formControlName="radioChoice" ngDefaultControl></app-radio> 
+  <h3>Please Choose the Service Type:</h3>
+  <app-radio
+    [itemsarray]="objectArray"
+    [typeofitem]="'keyvalue'"
+    formControlName="radioChoice"
+    ngDefaultControl
+  ></app-radio>
 
-<app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
-    controlName="comment" formControlName="comment" ngDefaultControl></app-textarea> <br/> <br/>
+  <app-textarea
+    [rows]="3"
+    [cols]="30"
+    placeholder="Enter your comments"
+    controlName="comment"
+    formControlName="comment"
+    ngDefaultControl
+  ></app-textarea>
+  <br />
 
-<app-button [text]="'Submit'" (click)="onSubmit()"> </app-button> &nbsp;
-<app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
-</form>
+  <div class="card" style="width: 600px">
+    <h3>Upload File</h3>
+    <app-file-uploader
+      fileName="demo[]"
+      urlToUpload="./upload.php"
+      acceptType="image/*"
+      fileSize="100000"
+      (uploadEvent)="onUploadEvent($event)"
+      mode="advanced"
+      [multiple]="true"
+    >
+    </app-file-uploader>
+  </div>
 
 <br/>
-<h2> Output: </h2>
 
-{{form.value | json}}
+
+  <app-button [text]="'Submit'" (click)="onSubmit()"> </app-button> &nbsp;
+  <app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
+</form>
+
+<br />
+<h2>Output:</h2>
+
+{{ form.value | json }}
 
 <app-footer></app-footer>
 

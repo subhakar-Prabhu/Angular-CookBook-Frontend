@@ -12,6 +12,7 @@ import { FooterComponent } from './modules/layout/footer/footer.component';
 import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularCommonLibModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
