@@ -16,7 +16,7 @@
 <app-textarea [rows]="3" [cols]="30" placeholder="Enter your comments"
     controlName="comment" formControlName="comment" ngDefaultControl></app-textarea> <br/> <br/>
 
-<app-button [text]="'Submit'"> </app-button> &nbsp;
+<app-button [text]="'Submit'" (click)="onSubmit()"> </app-button> &nbsp;
 <app-button [text]="'Clear'" btnType="p-button-secondary"> </app-button>
 </form>
 
@@ -26,3 +26,20 @@
 {{form.value | json}}
 
 <app-footer></app-footer>
+
+<!-- 
+<app-modal
+  [mlVisibility]="modalVisibility"
+  [mlClosable]="false"
+  [mlContentRef]="body"
+  [mlFooterRef]="footer"
+  [mlHeader] = "'Confirmation Popup'"
+>
+  <ng-template #body>
+    <p>You have unsaved changes. Leave?</p>
+  </ng-template>
+  <ng-template #footer>
+    <app-button [text]="'Yes'" (click)="onClickYes()"> </app-button> &nbsp; &nbsp;
+    <app-button [text]="'No'" btnType="p-button-danger" (click)="modalVisibility = false"> </app-button>
+  </ng-template>
+</app-modal> -->

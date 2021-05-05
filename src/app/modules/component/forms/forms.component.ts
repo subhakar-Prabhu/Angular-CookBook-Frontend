@@ -7,7 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
-
+//modalVisibility: boolean = false;
+isFormSubmitted = false;
+isFormValid = () => this.isFormSubmitted || !this.form.dirty;
   public form: FormGroup;
   objectArray = [
     {value: 'Tyre Replacement', key: 'A'},
@@ -51,5 +53,8 @@ export class FormsComponent implements OnInit {
 
   onDateSelectEvent(evt: any) {
     console.log('Selected Date Value:', evt);
+  }
+  onSubmit() {
+    this.isFormSubmitted = true;
   }
 }
