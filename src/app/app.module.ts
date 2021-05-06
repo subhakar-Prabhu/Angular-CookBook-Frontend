@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { CardModule } from 'primeng/card';
+import { AngularCommonLibModule } from '@psubakar/angular-common-lib';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsComponent } from './modules/component/forms/forms.component';
 import { IntroductionComponent } from './modules/layout/introduction/introduction.component';
 import { DashboardComponent } from './modules/layout/dashboard/dashboard.component';
-import { CardModule } from 'primeng/card';
-import { AngularCommonLibModule } from '@psubakar/angular-common-lib';
 import { HeaderComponent } from './modules/layout/header/header.component';
 import { FooterComponent } from './modules/layout/footer/footer.component';
 import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastModule } from 'primeng/toast';
+import { NgRxEffects } from './modules/component/ng-rx/store/ngrx.effects';
+import * as fromApp from './store/app.reducer';
 
 @NgModule({
   declarations: [
@@ -22,19 +28,22 @@ import { ToastModule } from 'primeng/toast';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    NgRxComponent
+    NgRxComponent,
   ],
   imports: [
     CardModule,
     FormsModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularCommonLibModule,
     BrowserAnimationsModule,
-    ToastModule
+    ToastModule,
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([NgRxEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
