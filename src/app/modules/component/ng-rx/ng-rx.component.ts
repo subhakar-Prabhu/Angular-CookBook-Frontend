@@ -47,7 +47,12 @@ export class NgRxComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscriptionLocalData.unsubscribe();
-    this.subscriptionAPIData.unsubscribe();
+    if (this.subscriptionLocalData) {
+      this.subscriptionLocalData.unsubscribe();
+    }
+
+    if (this.subscriptionAPIData) {
+      this.subscriptionAPIData.unsubscribe();
+    }
   }
 }

@@ -1,23 +1,23 @@
 <app-header></app-header>
 <h2>NgRx Example</h2>
 <div class="row">
-  <div class="col-md-5">
-    <h3>NgRx with Local Data</h3>
-    <app-button [text]="'Local Store Data'" (click)="onClickLocalStore()">
-    </app-button>
-    <div *ngFor="let dataEl of dataLocal; let i = index">
-      <p><b>Title:</b> {{ dataEl.title }}</p>
-      <p><b>Description:</b> {{ dataEl.description }}</p>
-    </div>
+  <h3>NgRx with Local Data</h3>
+  <app-button [text]="'Local Store Data'" (click)="onClickLocalStore()">
+  </app-button>
+  <div *ngFor="let dataEl of dataLocal; let i = index">
+    <p><b>Title:</b> {{ dataEl.title }}</p>
+    <p><b>Description:</b> {{ dataEl.description }}</p>
   </div>
-  <div class="col-md-7">
-    <h3>NgRx with API Data</h3>
-    <app-button [text]="'API Store Data'" (click)="onClickAPIStore()">
-    </app-button>
-    <p *ngIf="loadingFlag">Loading...</p>
-    <div *ngFor="let dataEl of dataAPI; let i = index">
-      <p><b>Title:</b> {{ dataEl.title }}</p>
-      <p><b>Description:</b> {{ dataEl.description }}</p>
-    </div>
+</div>
+<br />
+<hr />
+<div class="row">
+  <h3>NgRx with API Data</h3>
+  <app-button [text]="'API Store Data'" (click)="onClickAPIStore()">
+  </app-button>
+  <p *ngIf="loadingFlag">Loading...</p>
+  <div *ngFor="let dataEl of dataAPI; let i = index">
+    <p><b>Title:</b> {{ dataEl.title }}</p>
+    <p><b>Description:</b> {{ dataEl.description }}</p>
   </div>
 </div>
