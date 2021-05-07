@@ -17,10 +17,12 @@ export class ApiCallsComponent implements OnInit {
     this.apiCallService.fetchData();
   }
 
+  //Populating the UI with data getting from Service API Call.
   onClickServiceAPICall() {
     this.dataService = this.apiCallService.getServiceData();
   }
 
+  //Populating the UI with data getting from Interceptor API Call.
   onClickInterceptorAPICall() {
     this.dataInterceptor = this.apiCallService.getInterceptorData();
     console.log(this.dataInterceptor);

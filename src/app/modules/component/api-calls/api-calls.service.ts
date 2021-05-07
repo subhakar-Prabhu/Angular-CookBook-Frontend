@@ -13,6 +13,7 @@ export class ApiCallsService {
 
   constructor(private http: HttpClient) {}
 
+  // Fetching the data from server
   fetchData() {
     return this.http
       .get<Data[]>(
@@ -28,18 +29,22 @@ export class ApiCallsService {
       });
   }
 
+  //Setting the data on local variable, getting from server service.
   setServiceData(dataService: Data[]) {
     this.dataService = dataService;
   }
 
+  //Setting the data to UI, getting from server service.
   getServiceData() {
     return this.dataService.slice();
   }
 
+  //Setting the data on local variable, getting from server interceptor.
   setInterceptorData(dataInterceptor: Data[]) {
     this.dataInterceptor = dataInterceptor;
   }
 
+  //Setting the data to UI, getting from server interceptor.
   getInterceptorData() {
     return this.dataInterceptor.slice();
   }

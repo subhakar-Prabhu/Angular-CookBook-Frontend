@@ -23,6 +23,7 @@ export class NgRxComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {}
 
+  //Populating the UI with data getting from local stored variable.
   onClickLocalStore() {
     this.subscriptionLocalData = this.store
       .select('data')
@@ -31,6 +32,8 @@ export class NgRxComponent implements OnInit, OnDestroy {
         this.dataLocal = data;
       });
   }
+
+  //Populating the UI with data getting from server API call.
   onClickAPIStore() {
     this.store.dispatch(new NgRxActions.FetchData());
     this.subscriptionAPIData = this.store
@@ -46,6 +49,7 @@ export class NgRxComponent implements OnInit, OnDestroy {
       });
   }
 
+  //Removing the subscriptions created.
   ngOnDestroy() {
     if (this.subscriptionLocalData) {
       this.subscriptionLocalData.unsubscribe();

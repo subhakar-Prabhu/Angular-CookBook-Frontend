@@ -8,6 +8,8 @@ import { Data } from '../data.model';
 
 @Injectable()
 export class NgRxEffects {
+
+  //Fetching the data from Server using ngRx effects.
   fetchData$ = createEffect(() =>
     this.actions$.pipe(
       ofType(NgRxActions.FETCH_DATA),
