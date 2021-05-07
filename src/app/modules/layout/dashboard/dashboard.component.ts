@@ -4,14 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   formsBtn() {
     this.router.navigate(['/forms']);
@@ -22,11 +20,10 @@ export class DashboardComponent implements OnInit {
   }
 
   apiBtn() {
-    alert('apiBtn');
+    this.router.navigate(['/api-calls']);
   }
 
   validationsBtn() {
     alert('validationsBtn');
   }
-
 }

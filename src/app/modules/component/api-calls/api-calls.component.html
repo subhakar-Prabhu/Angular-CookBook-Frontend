@@ -1,0 +1,10 @@
+<app-header></app-header>
+<h2>API-Calls Example</h2>
+<div class="row">
+  <app-button [text]="'API Call Data'" (click)="onClickAPICall()">
+  </app-button>
+  <div *ngFor="let dataEl of data; let i = index">
+    <p><b>Title:</b> {{ dataEl.title }}</p>
+    <p><b>Description:</b> {{ dataEl.description }}</p>
+  </div>
+</div>

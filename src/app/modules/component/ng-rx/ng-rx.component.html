@@ -9,15 +9,15 @@
       <p><b>Title:</b> {{ dataEl.title }}</p>
       <p><b>Description:</b> {{ dataEl.description }}</p>
     </div>
-    <div class="col-md-7">
-      <h3>NgRx with API Data</h3>
-      <app-button [text]="'API Store Data'" (click)="onClickAPIStore()">
-      </app-button>
-      <p *ngIf="loadingFlag">Loading...</p>
-      <div *ngFor="let dataEl of dataAPI; let i = index">
-        <p><b>Title:</b> {{ dataEl.title }}</p>
-        <p><b>Description:</b> {{ dataEl.description }}</p>
-      </div>
+  </div>
+  <div class="col-md-7">
+    <h3>NgRx with API Data</h3>
+    <app-button [text]="'API Store Data'" (click)="onClickAPIStore()">
+    </app-button>
+    <p *ngIf="loadingFlag">Loading...</p>
+    <div *ngFor="let dataEl of dataAPI; let i = index">
+      <p><b>Title:</b> {{ dataEl.title }}</p>
+      <p><b>Description:</b> {{ dataEl.description }}</p>
     </div>
   </div>
 </div>

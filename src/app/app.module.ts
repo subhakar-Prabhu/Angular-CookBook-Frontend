@@ -19,6 +19,7 @@ import { NgRxComponent } from './modules/component/ng-rx/ng-rx.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgRxEffects } from './modules/component/ng-rx/store/ngrx.effects';
 import * as fromApp from './store/app.reducer';
+import { ApiCallsComponent } from './modules/component/api-calls/api-calls.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import * as fromApp from './store/app.reducer';
     HeaderComponent,
     FooterComponent,
     NgRxComponent,
+    ApiCallsComponent,
   ],
   imports: [
     CardModule,
