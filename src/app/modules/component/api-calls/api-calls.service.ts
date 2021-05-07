@@ -8,7 +8,8 @@ import { Data } from '../ng-rx/data.model';
   providedIn: 'root',
 })
 export class ApiCallsService {
-  private data: Data[] = [];
+  private dataService: Data[] = [];
+  private dataInterceptor: Data[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +20,7 @@ export class ApiCallsService {
       )
       .pipe(
         tap((dataArray) => {
-          this.setData(dataArray);
+          this.setServiceData(dataArray);
         })
       )
       .subscribe((resData) => {
@@ -27,11 +28,19 @@ export class ApiCallsService {
       });
   }
 
-  setData(data: Data[]) {
-    this.data = data;
+  setServiceData(dataService: Data[]) {
+    this.dataService = dataService;
   }
 
-  getData() {
-    return this.data.slice();
+  getServiceData() {
+    return this.dataService.slice();
+  }
+
+  setInterceptorData(dataInterceptor: Data[]) {
+    this.dataInterceptor = dataInterceptor;
+  }
+
+  getInterceptorData() {
+    return this.dataInterceptor.slice();
   }
 }

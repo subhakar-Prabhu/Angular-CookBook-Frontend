@@ -1,9 +1,24 @@
 <app-header></app-header>
 <h2>API-Calls Example</h2>
 <div class="row">
-  <app-button [text]="'API Call Data'" (click)="onClickAPICall()">
+  <app-button
+    [text]="'API Call Data - Service'"
+    (click)="onClickServiceAPICall()"
+  >
   </app-button>
-  <div *ngFor="let dataEl of data; let i = index">
+  <div *ngFor="let dataEl of dataService; let i = index">
+    <p><b>Title:</b> {{ dataEl.title }}</p>
+    <p><b>Description:</b> {{ dataEl.description }}</p>
+  </div>
+</div>
+<br />
+<hr />
+<div class="row">
+  <app-button
+    [text]="'API Call Data - Interceptor'"
+    (click)="onClickInterceptorAPICall()"
+  ></app-button>
+  <div *ngFor="let dataEl of dataInterceptor; let i = index">
     <p><b>Title:</b> {{ dataEl.title }}</p>
     <p><b>Description:</b> {{ dataEl.description }}</p>
   </div>

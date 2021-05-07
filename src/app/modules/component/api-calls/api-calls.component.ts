@@ -8,7 +8,8 @@ import { ApiCallsService } from './api-calls.service';
   styleUrls: ['./api-calls.component.css'],
 })
 export class ApiCallsComponent implements OnInit {
-  data: Data[];
+  dataService: Data[];
+  dataInterceptor: Data[];
 
   constructor(private apiCallService: ApiCallsService) {}
 
@@ -16,7 +17,12 @@ export class ApiCallsComponent implements OnInit {
     this.apiCallService.fetchData();
   }
 
-  onClickAPICall() {
-    this.data = this.apiCallService.getData();
+  onClickServiceAPICall() {
+    this.dataService = this.apiCallService.getServiceData();
+  }
+
+  onClickInterceptorAPICall() {
+    this.dataInterceptor = this.apiCallService.getInterceptorData();
+    console.log(this.dataInterceptor);
   }
 }

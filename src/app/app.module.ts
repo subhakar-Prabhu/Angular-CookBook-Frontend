@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { AngularCommonLibModule } from '@psubakar/angular-common-lib';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgRxEffects } from './modules/component/ng-rx/store/ngrx.effects';
 import * as fromApp from './store/app.reducer';
 import { ApiCallsComponent } from './modules/component/api-calls/api-calls.component';
+import { ApiCallsInterceptorService } from './modules/component/api-calls/api-calls-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,13 @@ import { ApiCallsComponent } from './modules/component/api-calls/api-calls.compo
     StoreModule.forRoot(fromApp.appReducer),
     EffectsModule.forRoot([NgRxEffects]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiCallsInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
