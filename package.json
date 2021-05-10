@@ -24,7 +24,7 @@
     "@ng-select/ng-select": "^6.1.0",
     "@ngrx/effects": "^11.1.1",
     "@ngrx/store": "^11.1.1",
-    "@psubakar/angular-common-lib": "^0.22.0",
+    "@psubakar/angular-common-lib": "^0.23.0",
     "ag-grid-angular": "^25.1.0",
     "ag-grid-community": "^25.1.0",
     "ngx-spinner": "^11.0.1",
