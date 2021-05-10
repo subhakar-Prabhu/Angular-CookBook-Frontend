@@ -27,6 +27,7 @@
     "@psubakar/angular-common-lib": "^0.23.0",
     "ag-grid-angular": "^25.1.0",
     "ag-grid-community": "^25.1.0",
+    "ngx-scrolltop": "^2.4.0",
     "ngx-spinner": "^11.0.1",
     "ngx-toastr": "^13.2.1",
     "primeicons": "^4.1.0",
