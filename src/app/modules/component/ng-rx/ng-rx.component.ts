@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Data } from './data.model';
 import * as fromApp from '../../../store/app.reducer';
 import * as NgRxActions from './store/ngrx.actions';
@@ -19,7 +19,7 @@ export class NgRxComponent implements OnInit, OnDestroy {
   subscriptionLocalData: Subscription;
   subscriptionAPIData: Subscription;
 
-  constructor(private store: Store<fromApp.AppState>) {}
+  constructor(private store: Store<fromApp.AppState>, private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {}
 
@@ -43,8 +43,10 @@ export class NgRxComponent implements OnInit, OnDestroy {
         this.dataAPI = data;
         if (data.length === 0) {
           this.loadingFlag = true;
+          this.spinner.show();
         } else {
           this.loadingFlag = false;
+          this.spinner.hide();
         }
       });
   }
