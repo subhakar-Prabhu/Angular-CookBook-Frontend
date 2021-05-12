@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideMockStore } from '@ngrx/store/testing';
 
 import { NgRxComponent } from './ng-rx.component';
 
@@ -8,9 +9,9 @@ describe('NgRxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgRxComponent ]
-    })
-    .compileComponents();
+      declarations: [NgRxComponent],
+      providers: [provideMockStore({})],
+    }).compileComponents();
   });
 
   beforeEach(() => {
